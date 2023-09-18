@@ -1,0 +1,87 @@
+$pc: 1024px; // PC
+$tab: 680px; // タブレット
+$sp: 480px; // スマホ
+
+@mixin pc {
+    @media (max-width: ($pc)) {
+        @content;
+    }
+}
+@mixin tab {
+    @media (max-width: ($tab)) {
+        @content;
+    }
+}
+@mixin sp {
+    @media (max-width: ($sp)) {
+        @content;
+    }
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.backToHomeButton{
+    display: flex;
+    justify-content: center;
+}
+.cart {
+    display: flex;
+    justify-content: center;
+    margin: 4rem;
+}
+
+.leftside {
+    flex: 0.7;
+    border: 1px solid #a2a9b0;
+    padding: 2rem;
+}
+
+.cart-item {
+    border-top: 1px solid #a2a9b0;
+    border-bottom: 1px solid #a2a9b0;
+    display: flex;
+    justify-content: space-between;
+    
+    img {
+        width: 30%;
+        object-fit: contain;
+        padding: 1rem;
+    }
+    h3 {
+        padding: 1rem;
+    }
+    @include pc {
+        flex-direction: column;
+    }
+}
+.cart-item-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.delete-item {
+    color: rgb(0, 15, 128);
+    text-decoration: underline;
+    cursor: pointer;
+}
+.rightside {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border: 1px solid #a2a9b0;
+    padding: 2rem;
+    margin-left: 2rem;
+}
+.rightside > p {
+    padding-right: 1rem;
+}
+.iconbutton {
+    display: flex;
+    justify-content: center;
+}
