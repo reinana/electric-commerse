@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Item.scss";
 //icons
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
@@ -13,7 +13,6 @@ import {
     toggleFavorite,
     selectfavorite,
 } from "../features/favorite/favoriteSlice";
-import ItemDetail from "./ItemDetail";
 import { setCurrentItem } from "../features/modal/ItemSlice";
 
 type Props = {
@@ -27,7 +26,7 @@ type Props = {
     favorite: boolean;
 };
 const Item = (props: Props) => {
-    const { id, category, itemName, price, image } = props;
+    const { id, itemName, price, image } = props;
     const dispatch = useAppDispatch();
     const favoriteList = useAppSelector(selectfavorite);
     const currentFavorite = favoriteList.find((item) => item.id === id);
