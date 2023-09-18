@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/electric-commerse/static/css/main.7096ff62.css",
+    "main.js": "/electric-commerse/static/js/main.0b51eaad.js",
+    "index.html": "/electric-commerse/index.html",
+    "main.7096ff62.css.map": "/electric-commerse/static/css/main.7096ff62.css.map",
+    "main.0b51eaad.js.map": "/electric-commerse/static/js/main.0b51eaad.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7096ff62.css",
+    "static/js/main.0b51eaad.js"
+  ]
+}
